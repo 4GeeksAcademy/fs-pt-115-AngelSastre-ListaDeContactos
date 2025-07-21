@@ -1,16 +1,16 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
-import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
-
-  const {store, dispatch} =useGlobalReducer()
-
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-		</div>
-	);
-}; 
+    return (
+        <div className="container text-center mt-5">
+            <h1>Bienvenido a la Lista de Contactos</h1>
+            <p className="lead mt-3">
+                Usa la aplicación para gestionar tus contactos: añadir, editar y eliminar fácilmente.
+            </p>
+            <Link to="/contacts" className="btn btn-primary mt-4">
+                Ver Lista de Contactos
+            </Link>
+        </div>
+    );
+};
